@@ -1,7 +1,7 @@
 export const Header = () => {
   return (
     <header className='sticky top-0 h-16 z-30 w-full'>
-      <nav className='flex bg-gray-100 border-gray-500 px-4 lg:px-6 py-2.5 dark:bg-gray-800 w-full'>
+      <nav className='flex bg-white/30 px-4 lg:px-6 py-2.5 dark:bg-gray-800 w-full backdrop-blur-lg ring-1 ring-black/5'>
         <a href='#' className='flex items-center'>
           <img
             src='https://upload.wikimedia.org/wikipedia/commons/b/b5/2k-logo.svg'
