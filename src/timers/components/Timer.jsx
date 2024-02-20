@@ -27,7 +27,7 @@ export const Timer = ({
               placeholder='Mi Temporizador'
             />
             <button
-              className='flex self-end py-2 px-2 mx-2 my-0 select-none rounded-lg border-0  align-middle font-sans uppercase text-white shadow shadow-black/30 justify-center bg-red-500 hover:bg-red-400 hover:text-white active:bg-red-600 active:text-slate-100 ring-1 ring-black/15'
+              className='flex self-end py-2 px-2 m-0 ms-1 select-none rounded-lg align-middle font-sans uppercase text-white shadow shadow-black/30 justify-center bg-red-500 hover:bg-red-600 hover:text-white active:bg-red-700 active:text-slate-100 ring-1 ring-black/15'
               type='button'
               onClick={() => onDeleteTimer(id)}
             >
@@ -43,19 +43,19 @@ export const Timer = ({
               </svg>
             </button>
           </div>
-          <h1 className='flex-3 my-3 block justify-center gap-0 font-sans text-4xl font-bold tracking-normal text-slate-800 antialiased'>
+          <h1 className='flex-3 my-2 block justify-center gap-0 font-sans text-4xl font-bold tracking-normal text-slate-800 antialiased'>
             {convertSecToHMS(seconds)}
           </h1>
         </div>
         <div className='flex'>
           <button
-            className={`flex-1 select-none rounded-lg py-3.5 text-center align-middle font-sans text-sm font-bold uppercase text-slate-100 shadow-md shadow-black/30 justify-center 
+            className={`flex-1 select-none rounded-lg h-10 text-center align-middle font-sans text-sm font-bold uppercase text-slate-100 shadow shadow-black/30 justify-center 
             ${
               paused === -1
-                ? 'bg-green-500 hover:bg-green-400 active:bg-green-600'
+                ? 'bg-green-600 hover:bg-green-700 active:bg-green-800'
                 : paused === 1
-                ? 'bg-orange-500 hover:bg-orange-400 active:bg-orange-600'
-                : 'bg-blue-500 hover:bg-blue-400 active:bg-blue-600'
+                ? 'bg-orange-600 hover:bg-orange-700 active:bg-orange-800'
+                : 'bg-blue-600 hover:bg-blue-700 active:bg-blue-800'
             } 
             hover:text-white active:text-slate-100`}
             type='button'
@@ -66,7 +66,7 @@ export const Timer = ({
           </button>
           {(running || paused === 1) && (
             <button
-              className='flex-1 select-none rounded-lg bg-red-500 py-3.5 mx-1 text-center align-middle font-sans text-sm font-bold uppercase text-slate-100 shadow-md shadow-black/30 justify-center hover:bg-red-400 hover:text-white active:bg-red-600 active:text-slate-100'
+              className='flex-1 select-none rounded-lg bg-red-500 h-10 mx-1 text-center align-middle font-sans text-sm font-bold uppercase text-slate-100 shadow shadow-black/30 justify-center hover:bg-red-400 hover:text-white active:bg-red-600 active:text-slate-100'
               type='button'
               data-ripple-dark='true'
               onClick={() => (running || paused) && stop()}
