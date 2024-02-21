@@ -17,7 +17,7 @@ export const Timer = ({
     <>
       <div
         id={id}
-        className='relative flex w-full max-w-[14rem] flex-col rounded-xl bg-white/30 bg-clip-border p-2 shadow-lg shadow-slate-500/80 m-1 ring-1 ring-black/5 backdrop-blur-sm'
+        className='relative flex w-full max-w-[14rem] flex-col rounded-xl bg-white/30 bg-clip-border p-2 shadow-md shadow-slate-500/60 m-1 ring-1 ring-black/5 backdrop-blur-sm'
       >
         <div className='flex-col relative m-0 my-2 overflow-hidden rounded-no bg-transparent bg-clip-border text-center text-gray-700 shadow-none'>
           <div className='flex align-middle text-center justify-between'>
@@ -27,7 +27,7 @@ export const Timer = ({
               placeholder='Mi Temporizador'
             />
             <button
-              className='flex self-end py-2 px-2 m-0 ms-1 select-none rounded-lg align-middle font-sans uppercase text-white shadow shadow-black/30 justify-center bg-red-500 hover:bg-red-600 hover:text-white active:bg-red-700 active:text-slate-100 ring-1 ring-black/15'
+              className='flex self-end py-2 px-2 m-0 ms-1 select-none rounded-lg align-middle font-sans uppercase text-white shadow shadow-black/30 justify-center bg-red-500 hover:bg-red-600 hover:text-white active:bg-red-700 active:text-slate-200 ring-1 ring-black/15'
               type='button'
               onClick={() => onDeleteTimer(id)}
             >
@@ -57,7 +57,7 @@ export const Timer = ({
                 ? 'bg-orange-600 hover:bg-orange-700 active:bg-orange-800'
                 : 'bg-blue-600 hover:bg-blue-700 active:bg-blue-800'
             } 
-            hover:text-white active:text-slate-100`}
+            hover:text-white active:text-slate-200`}
             type='button'
             data-ripple-dark='true'
             onClick={() => (running ? pause() : start())}
@@ -66,7 +66,7 @@ export const Timer = ({
           </button>
           {(running || paused === 1) && (
             <button
-              className='flex-1 select-none rounded-lg bg-red-500 h-10 mx-1 text-center align-middle font-sans text-sm font-bold uppercase text-slate-100 shadow shadow-black/30 justify-center hover:bg-red-400 hover:text-white active:bg-red-600 active:text-slate-100'
+              className='flex-1 select-none rounded-lg h-10 mx-1 text-center align-middle font-sans text-sm font-bold uppercase text-slate-100 shadow shadow-black/30 justify-center bg-red-500 hover:bg-red-600 hover:text-white active:bg-red-700 active:text-slate-200'
               type='button'
               data-ripple-dark='true'
               onClick={() => (running || paused) && stop()}
