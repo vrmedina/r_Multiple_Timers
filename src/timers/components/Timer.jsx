@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { convertSecToHMS } from '../helpers/convertSecToHMS';
 import { useTimer } from '../hooks/useTimer';
 

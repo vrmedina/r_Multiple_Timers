@@ -3,7 +3,7 @@ import { Timers } from './timers/pages/Timers';
 import { Header } from './ui/components/Header';
 
 export const MultipleTimersApp = () => {
-  const [timers, setTimers] = useState({});
+  const [timers, setTimers] = useState([]);
 
   const onCreateTimer = (initialSeconds) => {
     const id = parseInt(Date.now() * Math.random()).toString();

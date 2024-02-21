@@ -6,7 +6,7 @@ export const Timers = ({ timers, onDeleteTimer, onCreateTimer }) => {
     <>
       <ConfigBar timers={timers} onCreateTimer={onCreateTimer} />
       <div className='flex flex-wrap justify-center container mx-auto'>
-        {timers.map((timer) => (
+        {timers.length > 0 && timers.map((timer) => (
           <Timer key={timer.id} onDeleteTimer={onDeleteTimer} {...timer} />
         ))}
       </div>

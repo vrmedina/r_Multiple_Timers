@@ -48,11 +48,13 @@ export const ConfigBar = ({ onCreateTimer }) => {
       <button
         className='flex text-white bg-blue-700 hover:bg-blue-800 active:bg-blue-900 active:ring-2 active:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2.5 mx-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:active:bg-blue-800 focus:outline-none dark:active:ring-blue-800 shadow shadow-black/30'
         onClick={() => {
-          onResetForm();
-          onCreateTimer(totalSeconds);
+          if (totalSeconds() > 0) {
+            onResetForm();
+            onCreateTimer(totalSeconds);
+          }
         }}
       >
-        Add Timer
+      Nuevo timer
       </button>
     </div>
   );
